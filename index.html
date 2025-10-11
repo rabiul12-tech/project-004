@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – My RoofNex Contractor</title>
+    <meta
+      name="description"
+      content="Learn about My RoofNex Contractor, your trusted partner for all RoofNex needs with expertise in residential and commercial RoofNex solutions."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About – My RoofNex Contractor" />
+    <meta
+      property="og:description"
+      content="Learn about our RoofNex expertise and commitment to quality service for residential and commercial projects."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://example.com/RoofNex-og.jpg" />
+    <meta property="og:url" content="https://example.com/about" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About – My RoofNex Contractor" />
+    <meta
+      name="twitter:description"
+      content="Learn about our RoofNex expertise and commitment to quality service."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/RoofNex-twitter.jpg"
+    />
+
+    <style>
+      /* CSS Variables for consistent theming */
+      :root {
+        --purple: #4b2a83;
+        --gold: #ffc22e;
+        --black: #0f1220;
+        --light-gray: #f7f7f9;
+        --border: #e6e6ef;
+        --white: #ffffff;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --spacing-xs: 8px;
+        --spacing-sm: 16px;
+        --spacing-md: 24px;
+        --spacing-lg: 32px;
+        --spacing-xl: 48px;
+        --spacing-xxl: 64px;
+        --border-radius: 16px;
+        --transition: all 0.3s ease;
+      }
+
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--black);
+        line-height: 1.6;
+        background-color: var(--light-gray);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Alfa Slab One", serif;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        border: 2px solid transparent;
+        text-align: center;
+      }
+
+      .btn--primary {
+        background-color: var(--purple);
+        color: var(--white);
+      }
+
+      .btn--primary:hover {
+        background-color: #3a2167;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn--outline {
+        background-color: transparent;
+        border: 2px solid var(--gold);
+        color: var(--black);
+      }
+
+      .btn--outline:hover {
+        background-color: var(--gold);
+        transform: translateY(-2px);
+      }
+
+      .section {
+        padding: var(--spacing-xl) 0;
+      }
+
+      .section__title {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+        position: relative;
+      }
+
+      .section__title--accent::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 60px;
+        height: 4px;
+        background-color: var(--purple);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* Header Styles */
+      .header {
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--spacing-sm) 0;
+      }
+
+      .nav__logo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+        font-family: "Alfa Slab One", serif;
+        font-size: 1.5rem;
+        color: var(--purple);
+      }
+
+      .nav__menu {
+        display: flex;
+        gap: var(--spacing-lg);
+      }
+
+      .nav__link {
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav__link:hover {
+        color: var(--purple);
+      }
+
+      .nav__link--active {
+        color: var(--purple);
+      }
+
+      .nav__link--active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--purple);
+      }
+
+      .nav__toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--black);
+      }
+
+      /* Hero Banner */
+      .hero {
+        background: linear-gradient(
+            rgba(75, 42, 131, 0.9),
+            rgba(75, 42, 131, 0.9)
+          ),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%234B2A83"/><path d="M0 0L100 100" stroke="%233A2167" stroke-width="2"/><path d="M100 0L0 100" stroke="%233A2167" stroke-width="2"/></svg>');
+        background-size: cover;
+        color: var(--white);
+        padding: var(--spacing-xxl) 0 var(--spacing-xl);
+        text-align: center;
+      }
+
+      .breadcrumb {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-xs);
+        margin-top: var(--spacing-md);
+        font-size: 0.875rem;
+      }
+
+      .breadcrumb__item:not(:last-child)::after {
+        content: "/";
+        margin-left: var(--spacing-xs);
+        color: var(--gold);
+      }
+
+      .hero__title {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      /* About Section */
+      .about {
+        background-color: var(--white);
+      }
+
+      .about__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+
+      .about__image {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .about__text {
+        margin-bottom: var(--spacing-md);
+      }
+
+      /* Feature Band */
+      .feature-band {
+        background-color: var(--purple);
+        color: var(--white);
+      }
+
+      .feature-band__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+
+      .feature-band__image {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .feature-band__title {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+        padding-left: var(--spacing-md);
+        border-left: 4px solid var(--gold);
+      }
+
+      .feature-item {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .feature-item__icon {
+        background-color: rgba(255, 194, 46, 0.2);
+        color: var(--gold);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .feature-item__title {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-xs);
+        color: var(--gold);
+      }
+
+      /* Expertise Section */
+      .expertise {
+        background-color: var(--light-gray);
+      }
+
+      .expertise__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+
+      .expertise__image {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .checklist {
+        margin: var(--spacing-md) 0;
+      }
+
+      .checklist__item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .checklist__icon {
+        color: var(--gold);
+        font-size: 1.25rem;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background-color: var(--white);
+      }
+
+      .testimonials__header {
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .testimonials__container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testimonials__track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .testimonial {
+        background-color: var(--light-gray);
+        padding: var(--spacing-lg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        flex: 0 0 100%;
+        margin-right: var(--spacing-md);
+      }
+
+      .testimonial__icon {
+        color: var(--purple);
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .testimonial__content {
+        margin-bottom: var(--spacing-md);
+        font-style: italic;
+      }
+
+      .testimonial__author {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+      }
+
+      .testimonial__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .testimonial__name {
+        font-weight: 600;
+      }
+
+      .testimonial__role {
+        color: var(--purple);
+        font-size: 0.875rem;
+      }
+
+      .testimonials__nav {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-lg);
+      }
+
+      .testimonials__dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--border);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .testimonials__dot--active {
+        background-color: var(--purple);
+        transform: scale(1.2);
+      }
+
+      /* CTA Section */
+      .cta {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%234B2A83"/></svg>');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        text-align: center;
+        padding: var(--spacing-xxl) 0;
+      }
+
+      .cta__title {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: var(--spacing-lg);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+      }
+
+      .footer__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .footer__heading {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-md);
+        color: var(--gold);
+        position: relative;
+      }
+
+      .footer__heading::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--gold);
+      }
+
+      .footer__links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+
+      .footer__link:hover {
+        color: var(--gold);
+      }
+
+      .footer__contact-item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .footer__contact-icon {
+        color: var(--gold);
+      }
+
+      .footer__newsletter {
+        margin-top: var(--spacing-md);
+      }
+
+      .footer__newsletter-text {
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .footer__form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+
+      .footer__input {
+        padding: var(--spacing-sm);
+        border: 1px solid var(--border);
+        border-radius: var(--border-radius);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+        font-family: inherit;
+      }
+
+      .footer__input::placeholder {
+        color: var(--border);
+      }
+
+      .footer__message {
+        margin-top: var(--spacing-sm);
+        font-size: 0.875rem;
+        min-height: 1.5rem;
+      }
+
+      .footer__message--success {
+        color: #22c55e;
+      }
+
+      .footer__message--error {
+        color: #ef4444;
+      }
+
+      .footer__social {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+      }
+
+      .footer__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+      }
+
+      .footer__social-link:hover {
+        background-color: var(--gold);
+        color: var(--black);
+      }
+
+      .footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: var(--spacing-md);
+        text-align: center;
+        color: var(--border);
+        font-size: 0.875rem;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 767px) {
+        .nav__menu {
+          position: fixed;
+          top: 72px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 72px);
+          background-color: var(--white);
+          flex-direction: column;
+          padding: var(--spacing-xl);
+          gap: var(--spacing-lg);
+          transition: left 0.3s ease;
+          box-shadow: var(--shadow);
+        }
+
+        .nav__menu--open {
+          left: 0;
+        }
+
+        .nav__toggle {
+          display: block;
+        }
+
+        .hero__title {
+          font-size: 2.5rem;
+        }
+
+        .cta__title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .about__content {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+
+        .feature-band__content {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+
+        .expertise__content {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+
+        .testimonial {
+          flex: 0 0 calc(50% - var(--spacing-md));
+        }
+
+        .footer__content {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer__form {
+          flex-direction: row;
+        }
+
+        .footer__input {
+          flex: 1;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .testimonial {
+          flex: 0 0 calc(33.333% - var(--spacing-md));
+        }
+
+        .footer__content {
+          grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+        }
+      }
+
+      /* Focus styles for accessibility */
+      a:focus,
+      button:focus,
+      input:focus {
+        outline: 2px solid var(--gold);
+        outline-offset: 2px;
+      }
+
+      /* Body scroll lock when mobile menu is open */
+      body.body--no-scroll {
+        overflow: hidden;
+      }
+
+      /* Animation classes */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="#" class="nav__logo">
+            <i class="ri-home-5-line"></i> My RoofNex Contractor
+          </a>
+
+          <ul class="nav__menu" id="nav-menu">
+            <li><a href="#" class="nav__link">RoofNex</a></li>
+            <li><a href="#" class="nav__link">Commercial</a></li>
+            <li><a href="#" class="nav__link">Other Services</a></li>
+            <li><a href="#" class="nav__link">Financing</a></li>
+            <li><a href="#" class="nav__link nav__link--active">About</a></li>
+            <li><a href="#" class="btn btn--primary">Contact Us</a></li>
+          </ul>
+
+          <button
+            class="nav__toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+          >
+            <i class="ri-menu-line"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">ABOUT</h1>
+        <div class="breadcrumb">
+          <a href="#" class="breadcrumb__item">Home</a>
+          <span class="breadcrumb__item">About</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+      <div class="container">
+        <div class="about__content fade-in">
+          <div>
+            <h2 class="section__title">GET TO KNOW ABOUT US</h2>
+            <p class="about__text">
+              With over 15 years of experience in the RoofNex industry, we've
+              built a reputation for excellence, reliability, and craftsmanship.
+              Our team of certified professionals is dedicated to providing
+              top-quality RoofNex solutions for both residential and commercial
+              properties.
+            </p>
+            <p class="about__text">
+              We take pride in using only the highest quality materials and
+              employing innovative techniques to ensure your roof stands the
+              test of time while enhancing your property's aesthetic appeal.
+            </p>
+            <a href="#" class="btn btn--outline">Read More</a>
+          </div>
+          <div class="about__image">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23E6E6EF'/><path d='M0,200 L600,200 L600,400 L0,400 Z' fill='%234B2A83'/><path d='M150,150 L450,150 L450,200 L150,200 Z' fill='%23FFC22E'/><circle cx='300' cy='100' r='50' fill='%23FFC22E'/></svg>"
+              alt="Church-style roof example"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Band -->
+    <section class="section feature-band">
+      <div class="container">
+        <div class="feature-band__content fade-in">
+          <div class="feature-band__image">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='700' viewBox='0 0 600 700'><rect width='600' height='700' fill='%233A2167'/><circle cx='300' cy='350' r='150' fill='%23FFC22E'/></svg>"
+              alt="Roofer working on a roof"
+              width="600"
+              height="700"
+            />
+          </div>
+          <div>
+            <h2 class="feature-band__title">THE ONE STOP SERVICE</h2>
+            <p>
+              We provide comprehensive RoofNex solutions from inspection and
+              consultation to installation and maintenance. Our commitment to
+              excellence ensures that every project meets the highest standards
+              of quality and durability.
+            </p>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="ri-eye-line"></i>
+              </div>
+              <div>
+                <h3 class="feature-item__title">Vision</h3>
+                <p>
+                  To be the leading RoofNex contractor known for innovation,
+                  reliability, and exceptional customer service.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="ri-target-line"></i>
+              </div>
+              <div>
+                <h3 class="feature-item__title">Mission</h3>
+                <p>
+                  To deliver superior RoofNex solutions that exceed client
+                  expectations while maintaining the highest safety standards.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <i class="ri-star-smile-line"></i>
+              </div>
+              <div>
+                <h3 class="feature-item__title">Motto</h3>
+                <p>
+                  Quality above all – in materials, craftsmanship, and customer
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="section expertise">
+      <div class="container">
+        <h2 class="section__title text-center">
+          WE ARE EXPERTS AT FIXING ROOFS
+        </h2>
+        <div class="expertise__content fade-in">
+          <div>
+            <p>
+              Our team specializes in all aspects of roof repair, replacement,
+              and maintenance. Whether you're dealing with a minor leak or need
+              a complete roof overhaul, we have the skills and experience to
+              handle projects of any scale.
+            </p>
+            <p>
+              We stay updated with the latest industry advancements and
+              techniques to provide you with the most effective and long-lasting
+              solutions for your RoofNex needs.
+            </p>
+
+            <ul class="checklist">
+              <li class="checklist__item">
+                <i class="ri-checkbox-circle-fill checklist__icon"></i>
+                <span>Innovative work techniques</span>
+              </li>
+              <li class="checklist__item">
+                <i class="ri-checkbox-circle-fill checklist__icon"></i>
+                <span>Certified RoofNex company</span>
+              </li>
+              <li class="checklist__item">
+                <i class="ri-checkbox-circle-fill checklist__icon"></i>
+                <span>Quality materials guarantee</span>
+              </li>
+              <li class="checklist__item">
+                <i class="ri-checkbox-circle-fill checklist__icon"></i>
+                <span>Expert engineers and technicians</span>
+              </li>
+            </ul>
+          </div>
+          <div class="expertise__image">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%23E6E6EF'/><path d='M0,200 L600,200 L600,400 L0,400 Z' fill='%234B2A83'/><path d='M150,150 L450,150 L450,200 L150,200 Z' fill='%23FFC22E'/><circle cx='300' cy='100' r='50' fill='%23FFC22E'/></svg>"
+              alt="Roof repair in progress"
+              width="600"
+              height="400"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="testimonials__header">
+          <h2 class="section__title section__title--accent">
+            WHAT OUR CLIENTS SAYS
+          </h2>
+        </div>
+
+        <div class="testimonials__container">
+          <div class="testimonials__track" id="testimonials-track">
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                My RoofNex Contractor did an exceptional job replacing our roof.
+                They were professional, efficient, and the quality of work
+                exceeded our expectations. I would highly recommend them!
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">John Smith</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                The team was punctual, professional, and cleaned up perfectly
+                after the job. Our new roof looks amazing and we've had no
+                issues despite some severe weather since installation.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Sarah Johnson</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l testimonial__icon"></i>
+              <p class="testimonial__content">
+                I appreciated the detailed estimate and timeline provided. The
+                project was completed on schedule and within budget. The crew
+                was courteous and professional throughout the process.
+              </p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">
+                  <img
+                    src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'><circle cx='25' cy='25' r='25' fill='%234B2A83'/><circle cx='25' cy='20' r='10' fill='%23FFC22E'/><path d='M10,40 Q25,30 40,40' fill='%23FFC22E'/></svg>"
+                    alt="Customer avatar"
+                  />
+                </div>
+                <div>
+                  <div class="testimonial__name">Michael Brown</div>
+                  <div class="testimonial__role">Customer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__nav">
+            <div
+              class="testimonials__dot testimonials__dot--active"
+              data-index="0"
+            ></div>
+            <div class="testimonials__dot" data-index="1"></div>
+            <div class="testimonials__dot" data-index="2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2 class="cta__title">
+          WHEN DO WE START? WE'RE READY TO ASSIST YOU! CONNECT WITH US TODAY.
+        </h2>
+        <a href="#" class="btn btn--primary">CONTACT US</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__col">
+            <h3 class="footer__heading">Services</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">RoofNex</a></li>
+              <li><a href="#" class="footer__link">Commercial</a></li>
+              <li><a href="#" class="footer__link">Other services</a></li>
+              <li><a href="#" class="footer__link">Financing</a></li>
+              <li><a href="#" class="footer__link">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Register</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">FAQ</a></li>
+              <li><a href="#" class="footer__link">Support Center</a></li>
+              <li><a href="#" class="footer__link">Privacy and Policy</a></li>
+              <li><a href="#" class="footer__link">Terms and Condition</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Get in touch</h3>
+            <p>
+              Serving New Jersey & Pennsylvania with quality RoofNex solutions
+              for over 15 years.
+            </p>
+            <div class="footer__contact-item">
+              <i class="ri-map-pin-line footer__contact-icon"></i>
+              <span>123 RoofNex Ave, Trenton, NJ 08608</span>
+            </div>
+            <div class="footer__contact-item">
+              <i class="ri-mail-line footer__contact-icon"></i>
+              <a href="mailto:info@myRoofNexcontractor.com"
+                >info@myRoofNexcontractor.com</a
+              >
+            </div>
+            <div class="footer__contact-item">
+              <i class="ri-phone-line footer__contact-icon"></i>
+              <a href="tel:+1234567890">(123) 456-7890</a>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Newsletter</h3>
+            <p class="footer__newsletter-text">
+              Subscribe to our newsletter for updates and special offers.
+            </p>
+
+            <form class="footer__form" id="newsletter-form">
+              <input
+                type="email"
+                class="footer__input"
+                placeholder="Your email"
+                aria-label="Email address"
+              />
+              <button type="submit" class="btn btn--outline">Subscribe</button>
+            </form>
+            <div class="footer__message" id="newsletter-message"></div>
+
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="Twitter">
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="#" class="footer__social-link" aria-label="Instagram">
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>Copyright © myRoofNex–2022. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation Toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+      const body = document.body;
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("nav__menu--open");
+        body.classList.toggle("body--no-scroll");
+
+        // Change icon based on menu state
+        const icon = navToggle.querySelector("i");
+        if (navMenu.classList.contains("nav__menu--open")) {
+          icon.classList.remove("ri-menu-line");
+          icon.classList.add("ri-close-line");
+        } else {
+          icon.classList.remove("ri-close-line");
+          icon.classList.add("ri-menu-line");
+        }
+      });
+
+      // Testimonial Slider
+      function setupTestimonialSlider() {
+        const track = document.getElementById("testimonials-track");
+        const dots = document.querySelectorAll(".testimonials__dot");
+        let currentIndex = 0;
+
+        function goToSlide(index) {
+          if (index < 0) index = 0;
+          if (index > dots.length - 1) index = dots.length - 1;
+
+          const slideWidth = track.clientWidth;
+          track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+          // Update active dot
+          dots.forEach((dot) =>
+            dot.classList.remove("testimonials__dot--active")
+          );
+          dots[index].classList.add("testimonials__dot--active");
+
+          currentIndex = index;
+        }
+
+        // Add click events to dots
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => goToSlide(index));
+        });
+
+        // Auto-advance slides
+        setInterval(() => {
+          let nextIndex = currentIndex + 1;
+          if (nextIndex >= dots.length) nextIndex = 0;
+          goToSlide(nextIndex);
+        }, 5000);
+
+        // Handle window resize
+        window.addEventListener("resize", () => {
+          goToSlide(currentIndex);
+        });
+      }
+
+      // Newsletter Form Validation
+      function setupNewsletterForm() {
+        const form = document.getElementById("newsletter-form");
+        const message = document.getElementById("newsletter-message");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const email = form.querySelector('input[type="email"]').value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!email) {
+            message.textContent = "Please enter your email address.";
+            message.className = "footer__message footer__message--error";
+            return;
+          }
+
+          if (!emailRegex.test(email)) {
+            message.textContent = "Please enter a valid email address.";
+            message.className = "footer__message footer__message--error";
+            return;
+          }
+
+          // Simulate successful submission
+          message.textContent = "Thank you for subscribing to our newsletter!";
+          message.className = "footer__message footer__message--success";
+          form.reset();
+
+          // Clear message after 3 seconds
+          setTimeout(() => {
+            message.textContent = "";
+            message.className = "footer__message";
+          }, 3000);
+        });
+      }
+
+      // Scroll Animation with Intersection Observer
+      function setupScrollAnimation() {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Initialize everything when DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        setupTestimonialSlider();
+        setupNewsletterForm();
+        setupScrollAnimation();
+      });
+    </script>
+  </body>
+</html>
