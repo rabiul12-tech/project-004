@@ -1,0 +1,6 @@
+{
+  "name": "PEOPLIX HR — Better People Operations",
+  "description": "Complete browser-local Human Resources Management System covering Employee 360 profiles, attendance tracking, leave workflows, payroll simulation with PDF payslips, recruitment pipeline, performance management, and org charts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

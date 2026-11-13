@@ -1,0 +1,1699 @@
+# PROJECT 005: PEOPLIX HR — PREMIUM HUMAN RESOURCES MANAGEMENT SAAS
+
+## YOUR ROLE
+
+Act as a world-class SaaS Product Designer, Senior Frontend Architect, HR Software Specialist, and expert Next.js Engineer.
+
+Build a complete, premium, fully interactive Human Resources Management System named:
+
+**PEOPLIX HR**
+
+Tagline: Better People Operations.
+
+This is Project 005 of a 20-project professional frontend portfolio.
+
+The finished application should demonstrate the visual sophistication, workflow depth, data modeling, and engineering standards expected from a professionally commissioned $10,000+ custom HR management application.
+
+This is not a generic dashboard, static design concept, or nonfunctional demonstration.
+
+Create a complete and cohesive browser-local HR application with realistic fictional data and functional workflows.
+
+The highest priorities are:
+
+- Exceptional UX
+- Employee Management
+- Attendance
+- Leave Management
+- Payroll Simulation
+- Recruitment
+- Performance
+- Organization Management
+- Reliable LocalStorage persistence
+
+---
+
+# 1. TECHNOLOGY STACK
+
+Use:
+
+- Next.js App Router
+- React
+- TypeScript with strict typing
+- Tailwind CSS
+- shadcn/ui
+- Lucide React
+- Zustand for shared application state where appropriate
+- Recharts for analytics
+- React Hook Form
+- Zod for form validation
+- date-fns
+- dnd-kit for drag-and-drop recruitment stages
+- jsPDF or pdf-lib for payslip export
+- LocalStorage for persistent records
+- Vitest
+- React Testing Library
+- Playwright for critical workflows where supported
+
+## ABSOLUTE RESTRICTIONS
+
+Do not use:
+
+- PostgreSQL
+- MySQL
+- MongoDB
+- Firebase
+- Supabase
+- Prisma
+- External databases
+- Custom backend servers
+- External authentication services
+- Paid APIs
+- Cloud file storage
+- Real payroll processing services
+- Real employee attendance hardware integrations
+
+All application data must be stored locally in the browser.
+
+Do not build fake secure authentication.
+
+Do not store real employee personal information, national identification numbers, banking details, medical records, passwords, or other sensitive HR data.
+
+Use fictional employee records only.
+
+Make clear that this is an interactive portfolio demonstration, not a secure multi-user HRMS.
+
+---
+
+# 2. PRODUCT VISION
+
+PEOPLIX HR helps organizations manage employee information, attendance, time off, payroll preparation, recruitment, performance, and organizational structure.
+
+Target Users:
+
+- HR Managers
+- Business Owners
+- Operations Managers
+- Department Heads
+- Startup Teams
+- Recruitment Teams
+- Employees in a demo self-service experience
+
+Primary workflows:
+
+1. Create and manage employee profiles.
+2. Organize employees into departments.
+3. Track simulated attendance.
+4. Request and approve leave.
+5. Manage leave balances.
+6. Prepare simulated payroll.
+7. Generate payslip PDFs.
+8. Track job openings and candidates.
+9. Conduct performance reviews.
+10. Visualize reporting hierarchy.
+11. Analyze workforce trends.
+12. Export HR reports.
+
+Every workflow must use consistent local application data.
+
+---
+
+# 3. PREMIUM VISUAL IDENTITY
+
+Create an original, human-centric enterprise product design.
+
+Design inspiration:
+
+- BambooHR
+- Personio
+- Rippling
+- Modern HR SaaS interfaces
+
+Do not copy their branding, artwork, or proprietary layouts.
+
+## DESIGN PERSONALITY
+
+- Friendly but professional
+- Elegant
+- Clean
+- Trustworthy
+- Calm
+- Organized
+- People-focused
+- Warm enterprise software
+
+This application must be visually distinct from analytics, CRM, finance, and project management applications.
+
+## LIGHT MODE PALETTE
+
+- App Background: #F9FAFC
+- Main Surface: #FFFFFF
+- Sidebar: #FFFFFF
+- Primary Text: #172033
+- Secondary Text: #64748B
+- Border: #E7EAF0
+- Primary Accent: #0D9488
+- Accent Hover: #0F766E
+- Secondary Accent: #F97373
+- Success: #16A34A
+- Warning: #D97706
+- Danger: #DC2626
+- Soft Accent Background: #E8F7F4
+
+## DARK MODE PALETTE
+
+- App Background: #0D1420
+- Sidebar: #121D2B
+- Card Surface: #182535
+- Elevated Surface: #203044
+- Primary Text: #F8FAFC
+- Secondary Text: #94A3B8
+- Border: #304154
+- Primary Accent: #2DD4BF
+
+Create semantic design tokens.
+
+## TYPOGRAPHY
+
+Use Geist or Inter.
+
+Use clear visual hierarchy for:
+
+- Employee names
+- Job titles
+- Departments
+- Attendance status
+- Leave balance
+- Payroll amounts
+- Recruitment stages
+- Performance scores
+
+Use professional, compact data tables and readable forms.
+
+## COMPONENT STYLING
+
+- 10–14px corner radius
+- Soft, subtle shadows
+- Balanced white space
+- Delicate borders
+- Refined colored status badges
+- Clean employee avatars
+- Professional dropdowns
+- Smooth drawer transitions
+- Accessible controls
+- Appropriate empty states
+
+Avoid excessive gradients, neon styling, glassmorphism, and generic dashboard decorations.
+
+---
+
+# 4. APPLICATION LAYOUT
+
+Create a complete responsive AppShell.
+
+## SIDEBAR
+
+Top:
+
+- PEOPLIX HR logo
+- Company/workspace selector
+- Demo workspace information
+
+Navigation:
+
+WORKSPACE
+- Overview
+- Employees
+- Organization
+- Departments
+
+TIME & ATTENDANCE
+- Attendance
+- Leave Requests
+- Leave Calendar
+- Holidays
+
+PAYROLL
+- Payroll
+- Payslips
+- Compensation
+
+TALENT
+- Recruitment
+- Performance
+- Onboarding
+
+INSIGHTS
+- HR Analytics
+- Reports
+
+SYSTEM
+- Team & Roles
+- Activity
+- Settings
+- Help
+
+Bottom:
+
+- Demo employee profile
+- Role preview selector
+- Theme toggle
+- Sidebar collapse
+
+Requirements:
+
+- Active route states
+- Collapsible sidebar
+- Tooltips
+- Mobile navigation drawer
+- Smooth transitions
+- Accessible keyboard navigation
+
+## TOPBAR
+
+Include:
+
+- Breadcrumbs
+- Global search
+- Quick Create
+- Current date
+- Notification center
+- Theme toggle
+- Demo profile
+
+Quick Create:
+
+- Add Employee
+- Add Department
+- Record Attendance
+- Request Leave
+- Create Job Opening
+- Add Candidate
+- Create Performance Review
+
+Every action must open a functional form.
+
+---
+
+# 5. COMPLETE APPLICATION PAGES
+
+## PAGE 01: /dashboard
+
+HR Overview.
+
+Include:
+
+- Total Employees
+- Active Employees
+- Employees on Leave
+- Present Today
+- Absent Today
+- Open Positions
+- Pending Leave Requests
+- Upcoming Birthdays
+- Upcoming Work Anniversaries
+- Department Headcount
+- Attendance Trend
+- Workforce Growth
+- Recent Employee Activity
+- Upcoming Holidays
+- Quick Actions
+
+All values must derive from actual local records.
+
+Do not use unrelated hardcoded KPIs.
+
+## PAGE 02: /dashboard/employees
+
+EMPLOYEE DIRECTORY.
+
+Include:
+
+- Employee List View
+- Employee Grid View
+- Search
+- Department Filter
+- Job Title Filter
+- Employment Status Filter
+- Sorting
+- Pagination
+- Add Employee
+- Edit Employee
+- Archive Employee
+- Employee Profile Drawer
+- Bulk Selection
+- Bulk Export
+- Department Badges
+- Manager Information
+- Join Date
+- Work Email
+- Employment Type
+
+Employment statuses:
+
+- Active
+- On Leave
+- Probation
+- Inactive
+- Terminated
+
+Use fictional people and non-sensitive contact information.
+
+## PAGE 03: /dashboard/employees/[id]
+
+SIGNATURE FEATURE: EMPLOYEE 360° PROFILE.
+
+Create an exceptional employee detail workspace.
+
+Header:
+
+- Employee Avatar
+- Full Name
+- Job Title
+- Department
+- Employment Status
+- Manager
+- Work Email
+- Employment Start Date
+- Quick Actions
+
+Tabs:
+
+1. Overview
+2. Job Details
+3. Attendance
+4. Leave
+5. Compensation
+6. Performance
+7. Documents & Links
+8. Activity
+
+### Overview
+
+Show:
+
+- Employee summary
+- Department
+- Manager
+- Employment type
+- Reporting structure
+- Leave balance
+- Attendance summary
+- Upcoming events
+
+### Job Details
+
+Show:
+
+- Position
+- Employment type
+- Department
+- Reporting manager
+- Join date
+- Current status
+- Work location category
+- Employment history
+
+### Attendance
+
+Show employee-specific attendance records and summary.
+
+### Leave
+
+Show employee leave history, requests, and remaining balance.
+
+### Compensation
+
+Show fictional compensation records in the demo.
+
+### Performance
+
+Show reviews, goals, and ratings.
+
+### Documents & Links
+
+Support document names, types, and reference URLs.
+
+Do not claim cloud document storage.
+
+### Activity
+
+Show changes relevant to the selected employee.
+
+All tabs must use the same employee ID.
+
+No disconnected fake records.
+
+## PAGE 04: /dashboard/organization
+
+ORGANIZATION CHART.
+
+Build an interactive organization hierarchy.
+
+Features:
+
+- CEO/Owner at top
+- Department heads
+- Managers
+- Employees
+- Hierarchical connections
+- Expand/collapse groups
+- Zoom
+- Pan
+- Search employee
+- Highlight reporting line
+- Click employee to open detail
+- Department filtering
+- Responsive alternative tree view
+
+Use a suitable lightweight React graph/tree library if necessary.
+
+Validate manager relationships.
+
+Prevent circular reporting chains.
+
+Employees without managers must appear as valid roots.
+
+## PAGE 05: /dashboard/departments
+
+Department Management.
+
+Include:
+
+- Department cards
+- Department table
+- Department name
+- Department head
+- Employee count
+- Active employee count
+- Department description
+- Create department
+- Edit department
+- Archive department
+- Search
+- Sorting
+- Department details
+- Related employees
+- Team structure
+
+Handle department archiving safely.
+
+Do not silently delete employee records when departments change.
+
+## PAGE 06: /dashboard/attendance
+
+SIGNATURE FEATURE: ATTENDANCE MANAGEMENT.
+
+Include:
+
+- Daily attendance overview
+- Calendar view
+- Attendance table
+- Employee filter
+- Department filter
+- Date range filter
+- Check-in simulation
+- Check-out simulation
+- Manual attendance entry
+- Late arrival
+- Early departure
+- Absent status
+- Present status
+- Leave status
+- Attendance correction
+- Monthly attendance summary
+- CSV export
+
+Attendance statuses:
+
+- Present
+- Absent
+- Late
+- Half Day
+- On Leave
+- Holiday
+- Weekend
+
+Define how status and attendance events relate.
+
+Do not count an approved leave day as an unexplained absence.
+
+Avoid duplicate attendance records for the same employee and work date.
+
+Use configurable work schedules and timezone-aware datetime handling.
+
+No real GPS, biometric, or device tracking.
+
+## PAGE 07: /dashboard/leave
+
+LEAVE MANAGEMENT.
+
+Include:
+
+- Leave request list
+- Create leave request
+- Edit eligible request
+- Cancel request
+- Approve request
+- Reject request
+- Request details drawer
+- Employee
+- Leave type
+- Start date
+- End date
+- Working day count
+- Reason
+- Review notes
+- Approver
+- Request status
+
+Leave statuses:
+
+- Pending
+- Approved
+- Rejected
+- Cancelled
+
+Leave types:
+
+- Annual
+- Casual
+- Sick
+- Unpaid
+- Other
+
+Use demo policy settings.
+
+Calculate working days according to configured weekends and holidays.
+
+Prevent overlapping approved leave periods unless explicitly permitted.
+
+Pending requests must not permanently reduce available balance.
+
+Approved leave must update balances according to the defined policy.
+
+Cancelled approved leave should restore balance correctly.
+
+## PAGE 08: /dashboard/leave-calendar
+
+TEAM LEAVE CALENDAR.
+
+Include:
+
+- Monthly calendar
+- Weekly calendar
+- Department filtering
+- Employee filtering
+- Approved leave display
+- Pending leave distinction
+- Holiday display
+- Leave details
+- Calendar navigation
+- Team availability indicator
+
+Use the same leave records as the Leave Management page.
+
+Do not maintain separate hardcoded calendar data.
+
+## PAGE 09: /dashboard/holidays
+
+Holiday Management.
+
+Include:
+
+- Holiday list
+- Holiday calendar
+- Holiday name
+- Date
+- Recurring setting
+- Applicable location/team
+- Add holiday
+- Edit holiday
+- Delete holiday
+- Holiday import using validated JSON/CSV where practical
+
+These are configurable demonstration holidays.
+
+Do not claim automatically updated legal holiday compliance.
+
+Holidays must affect working-day leave calculations where configured.
+
+## PAGE 10: /dashboard/payroll
+
+PAYROLL SIMULATION WORKSPACE.
+
+This is another signature feature.
+
+Include:
+
+- Payroll period selector
+- Employee payroll list
+- Base salary
+- Allowances
+- Bonuses
+- Deductions
+- Unpaid leave adjustment
+- Gross pay
+- Net pay
+- Payroll status
+- Preview payroll
+- Generate payroll run
+- Review payroll
+- Mark finalized
+- Export payroll summary
+
+Payroll statuses:
+
+- Draft
+- Calculated
+- Finalized
+
+All payroll actions are simulations.
+
+No real money transfer, bank processing, tax filing, or legal payroll compliance.
+
+Do not automatically apply jurisdiction-specific tax rules without a configured and documented formula.
+
+Keep finalized payroll snapshots stable after source configuration changes.
+
+## PAGE 11: /dashboard/payslips
+
+PAYSLIP MANAGEMENT.
+
+Include:
+
+- Payslip list
+- Payroll period
+- Employee
+- Gross pay
+- Deductions
+- Net pay
+- Payslip status
+- Payslip preview
+- Download PDF
+- Print payslip
+
+Create a premium professional A4 payslip template.
+
+Include:
+
+- Company identity
+- Employee name
+- Employee ID
+- Job title
+- Department
+- Pay period
+- Earnings breakdown
+- Deductions breakdown
+- Gross pay
+- Net pay
+- Optional disclaimer
+
+PDF generation must work entirely on the client.
+
+Do not claim legal payroll certification.
+
+## PAGE 12: /dashboard/compensation
+
+Compensation Management.
+
+Include:
+
+- Employee compensation records
+- Base salary
+- Pay frequency
+- Allowances
+- Bonus structures
+- Effective date
+- Compensation change history
+- Edit compensation
+- Archive compensation configuration
+
+Use fictional amounts only.
+
+Maintain historical effective-date records.
+
+Do not rewrite finalized payroll snapshots when base salary changes.
+
+## PAGE 13: /dashboard/recruitment
+
+RECRUITMENT PIPELINE.
+
+Create an interactive Kanban-based Applicant Tracking System.
+
+Default stages:
+
+1. Applied
+2. Screening
+3. Interview
+4. Assessment
+5. Offer
+6. Hired
+7. Rejected
+
+Include:
+
+- Open job positions
+- Candidate records
+- Candidate detail drawer
+- Job association
+- Drag-and-drop pipeline
+- Candidate notes
+- Interview dates
+- Candidate status
+- Offer status simulation
+- Hiring decision
+- Search
+- Filter
+- Candidate creation
+- Candidate editing
+- Candidate archive
+
+Use dnd-kit.
+
+Drag-and-drop changes must persist.
+
+Candidate data must be fictional.
+
+Do not claim real email sending or calendar invitations.
+
+## PAGE 14: /dashboard/performance
+
+PERFORMANCE MANAGEMENT.
+
+Include:
+
+- Performance review cycles
+- Employee goals
+- Review templates
+- Manager feedback
+- Self-assessment simulation
+- Rating scales
+- Goal completion
+- Performance history
+- Create review
+- Edit review
+- Finalize review
+- Performance analytics
+
+Use configurable rating criteria.
+
+Do not imply that fictional ratings constitute validated employee assessments.
+
+## PAGE 15: /dashboard/onboarding
+
+EMPLOYEE ONBOARDING.
+
+Include:
+
+- Onboarding templates
+- Checklist tasks
+- Assigned employee
+- Responsible demo team member
+- Due dates
+- Completion status
+- Progress tracking
+- Create checklist
+- Edit checklist
+- Complete checklist items
+- Onboarding overview
+
+Support new hire onboarding and offboarding templates.
+
+Onboarding completion must derive from checklist records.
+
+## PAGE 16: /dashboard/analytics
+
+HR ANALYTICS.
+
+Include:
+
+- Headcount trend
+- Department distribution
+- Workforce growth
+- Employee status distribution
+- Attendance rate
+- Leave utilization
+- Recruitment pipeline
+- Hiring trend
+- Payroll cost trend
+- Employee tenure distribution
+- Performance summary
+
+Every chart must use consistent underlying records.
+
+Document metric definitions.
+
+Avoid unsupported claims about employee productivity or performance.
+
+## PAGE 17: /dashboard/reports
+
+HR REPORTING CENTER.
+
+Include:
+
+- Employee directory report
+- Attendance report
+- Leave report
+- Payroll summary report
+- Department report
+- Recruitment report
+- Performance summary report
+- Date filters
+- Department filters
+- Employee filters
+- CSV export
+- Print-friendly report
+- Saved report configuration
+
+Exports must reflect the current local dataset.
+
+## PAGE 18: /dashboard/team
+
+DEMO ROLES & WORKSPACE.
+
+Roles:
+
+- HR Admin
+- HR Manager
+- Department Manager
+- Employee
+
+Include:
+
+- Demo role selection
+- Team member directory
+- Role descriptions
+- Interface preview
+- Department assignments
+
+Because the app is browser-local, role visibility is purely a demonstration.
+
+Do not claim secure access control.
+
+Do not store real credentials.
+
+## PAGE 19: /dashboard/activity
+
+ACTIVITY TIMELINE.
+
+Include:
+
+- Employee created
+- Employee updated
+- Attendance corrected
+- Leave requested
+- Leave approved
+- Payroll generated
+- Compensation updated
+- Candidate moved
+- Performance review created
+- Department updated
+
+Provide:
+
+- Search
+- Date filtering
+- Event type filtering
+- Actor display
+- Related entity navigation
+
+This is a local demo activity log, not a tamper-proof audit system.
+
+## PAGE 20: /dashboard/settings
+
+WORKSPACE SETTINGS.
+
+Include:
+
+- Company name
+- Logo
+- Company description
+- Default currency
+- Date format
+- Week start day
+- Working days
+- Work schedule
+- Late arrival threshold
+- Holiday settings
+- Leave policies
+- Payroll configuration
+- Theme
+- Sidebar preferences
+- Notification preferences
+- JSON backup
+- JSON restore
+- Reset demo data
+
+Settings changes must propagate consistently to relevant calculations.
+
+## PAGE 21: /dashboard/help
+
+HELP & DOCUMENTATION.
+
+Include:
+
+- Getting started
+- Employee management
+- Attendance management
+- Leave approval workflow
+- Payroll simulation
+- Payslip generation
+- Recruitment pipeline
+- Performance reviews
+- Organization chart
+- Data backup
+- LocalStorage limitations
+- Frequently asked questions
+
+---
+
+# 6. EMPLOYEE DATA ARCHITECTURE
+
+Create strongly typed TypeScript models:
+
+- Employee
+- Department
+- JobRole
+- EmploymentHistory
+- AttendanceRecord
+- WorkSchedule
+- LeaveRequest
+- LeaveBalance
+- LeavePolicy
+- Holiday
+- CompensationRecord
+- PayrollRun
+- PayrollEntry
+- Payslip
+- JobOpening
+- Candidate
+- PerformanceReview
+- PerformanceGoal
+- OnboardingTemplate
+- OnboardingTask
+- Activity
+- DemoTeamMember
+- WorkspaceSettings
+
+Use stable unique IDs.
+
+Define explicit relationships.
+
+Examples:
+
+- Employee belongs to Department.
+- Employee may report to another Employee.
+- Employee has Attendance Records.
+- Employee has Leave Requests.
+- Employee has Compensation History.
+- Payroll Entry references Employee and Payroll Run.
+- Candidate references Job Opening.
+- Performance Review references Employee.
+- Onboarding Tasks reference Employee.
+
+Avoid storing duplicate copies of complete employee objects across related records.
+
+Use stable references and selectors.
+
+Implement safe deletion and archiving policies.
+
+---
+
+# 7. ATTENDANCE CALCULATION RULES
+
+Use centralized business logic.
+
+Define:
+
+- Scheduled start time
+- Scheduled end time
+- Check-in time
+- Check-out time
+- Working duration
+- Late threshold
+- Half-day threshold
+- Approved leave
+- Holiday
+- Weekend
+
+Calculate attendance status consistently.
+
+Handle:
+
+- Missing check-in
+- Missing check-out
+- Late check-in
+- Early check-out
+- Overnight shifts if supported
+- Approved leave
+- Holidays
+- Weekends
+- Timezone changes
+
+Use local date keys for date-only attendance records.
+
+Avoid accidental calendar-day shifts caused by UTC conversion.
+
+Do not assume every employee works the same schedule.
+
+---
+
+# 8. LEAVE BALANCE CALCULATION
+
+Implement:
+
+Opening Balance
++ Accrued Leave
++ Approved Adjustments
+− Approved Leave Usage
+= Available Leave Balance
+
+Clearly define how pending requests affect the displayed balance.
+
+Use working-day calculations.
+
+Exclude configured weekends and holidays where appropriate.
+
+Handle partial-day leave only if explicitly supported by the data model.
+
+Prevent duplicate deductions.
+
+If an approved leave request is cancelled, restore the balance exactly once.
+
+Do not claim the demo policies comply with employment law.
+
+---
+
+# 9. PAYROLL CALCULATION ENGINE
+
+Use decimal.js or integer minor units.
+
+Avoid floating-point precision errors.
+
+Example:
+
+Gross Pay = Base Pay + Allowances + Bonuses
+
+Total Deductions = Configured Deductions + Applicable Unpaid Leave Adjustments
+
+Net Pay = Gross Pay − Total Deductions
+
+Define rounding rules.
+
+Support:
+
+- Monthly payroll
+- Base salary
+- Allowances
+- Bonuses
+- Deductions
+- Unpaid leave adjustments
+- Payroll preview
+- Finalized snapshot
+- Payslip export
+
+This is a simplified simulation.
+
+Do not implement assumed tax withholding, statutory contributions, overtime law, or legal compliance unless explicitly configurable and verified.
+
+Do not process real payments.
+
+---
+
+# 10. ORGANIZATION CHART LOGIC
+
+Implement:
+
+- Employee-manager relationships
+- Reporting hierarchy
+- Department grouping
+- Search
+- Zoom
+- Expand/collapse
+- Employee detail navigation
+
+Prevent:
+
+- Self-reporting
+- Circular manager relationships
+- Invalid manager references
+
+Handle employees without managers.
+
+Use a functional list/tree alternative for mobile and keyboard navigation.
+
+---
+
+# 11. LOCALSTORAGE ARCHITECTURE
+
+Create a central, versioned persistence layer.
+
+Suggested storage keys:
+
+peoplix:version
+peoplix:hr-data
+peoplix:settings
+peoplix:ui
+
+Requirements:
+
+- Schema validation
+- Safe JSON parsing
+- Typed repositories
+- Deterministic initial seed
+- Version migrations
+- Corruption recovery
+- Storage quota handling
+- Backup
+- Restore
+- Reset
+- Persistent preferences
+- Safe Next.js hydration
+- Consistent cross-page updates
+
+Do not call LocalStorage in Server Components.
+
+Never overwrite saved changes during initialization.
+
+Avoid large image and document blobs.
+
+Use bundled fictional profile imagery or generated initials.
+
+---
+
+# 12. REALISTIC FICTIONAL DEMO DATA
+
+Seed approximately:
+
+- 120 Employees
+- 8 Departments
+- 15 Job Roles
+- 6 Months of Attendance
+- 100 Leave Requests
+- 12 Holiday Entries
+- 6 Payroll Periods
+- 30 Job Candidates
+- 8 Job Openings
+- 75 Performance Reviews
+- 80 Onboarding Tasks
+- 300 Activity Entries
+
+Use deterministic fictional records.
+
+All entity relationships must be consistent.
+
+Include:
+
+- Active employees
+- Probation employees
+- Employees on leave
+- Multiple departments
+- Multiple managers
+- Approved leave
+- Rejected leave
+- Pending leave
+- Late attendance
+- Absent attendance
+- Various payroll components
+- Different recruitment stages
+
+Never use actual private employee records.
+
+Keep the seed within practical browser storage limits.
+
+---
+
+# 13. GLOBAL SEARCH
+
+Ctrl/Cmd + K opens Global Search.
+
+Search:
+
+- Employees
+- Departments
+- Job Openings
+- Candidates
+- Leave Requests
+- Application Pages
+
+Commands:
+
+- Add Employee
+- Record Attendance
+- Request Leave
+- Open Payroll
+- Open Recruitment
+- Switch Theme
+
+Provide:
+
+- Keyboard navigation
+- Result groups
+- Search highlighting
+- Empty state
+- Focus management
+- Recent commands where useful
+
+All results and actions must work.
+
+---
+
+# 14. PREMIUM INTERACTIONS
+
+Build:
+
+- Employee profile drawer
+- Employee details pages
+- Quick Create dialogs
+- Attendance calendar
+- Leave approval dialogs
+- Payroll preview
+- Payslip PDF preview
+- Recruitment Kanban
+- Organization chart
+- Department filters
+- Search
+- Sort
+- Pagination
+- Confirmation dialogs
+- Toast feedback
+- Theme switching
+- Responsive navigation
+- Keyboard shortcuts
+
+Use subtle, purposeful animations.
+
+Respect prefers-reduced-motion.
+
+No dead controls.
+
+---
+
+# 15. RESPONSIVE DESIGN
+
+Support:
+
+- 360px
+- 390px
+- 768px
+- 1024px
+- 1440px
+- 1920px
+
+Desktop:
+
+- Full sidebar
+- Dense employee tables
+- Rich employee profiles
+- Organization hierarchy
+- Attendance calendar
+- Payroll tables
+
+Tablet:
+
+- Collapsible sidebar
+- Adapted card grids
+- Responsive charts
+
+Mobile:
+
+- Navigation drawer
+- Employee card alternatives
+- Touch-friendly forms
+- Agenda calendar alternative
+- Responsive profile tabs
+- Scrollable payroll tables
+- Accessible recruitment stage controls
+- No page-level horizontal overflow
+
+Do not hide essential functionality on mobile.
+
+---
+
+# 16. ACCESSIBILITY
+
+Target WCAG 2.2 AA.
+
+Implement:
+
+- Semantic HTML
+- Keyboard navigation
+- Accessible dialogs
+- Focus management
+- Form labels
+- Helpful validation messages
+- Accessible calendar controls
+- Alternative recruitment stage movement
+- Sufficient contrast
+- Reduced-motion support
+- Readable table headers
+- Meaningful status text
+
+Do not convey employment status through color alone.
+
+---
+
+# 17. PERFORMANCE
+
+Optimize:
+
+- Large employee lists
+- Calendar rendering
+- Organization chart
+- Payroll calculations
+- Analytics selectors
+- LocalStorage writes
+- Recruitment board
+- Search
+- PDF generation
+
+Use memoization and feature-based state subscriptions.
+
+Avoid unnecessary whole-application rerenders.
+
+Do not introduce excessive dependencies.
+
+---
+
+# 18. TESTING REQUIREMENTS
+
+Create automated tests for:
+
+1. Employee creation.
+2. Employee editing.
+3. Employee archive.
+4. Department assignment.
+5. Manager relationship validation.
+6. Circular manager prevention.
+7. Attendance check-in.
+8. Attendance check-out.
+9. Late attendance.
+10. Holiday treatment.
+11. Approved leave attendance.
+12. Leave request creation.
+13. Leave approval.
+14. Leave rejection.
+15. Leave cancellation.
+16. Leave balance deduction.
+17. Leave balance restoration.
+18. Overlapping leave detection.
+19. Working-day calculation.
+20. Payroll gross calculation.
+21. Payroll deduction calculation.
+22. Net payroll calculation.
+23. Payroll snapshot preservation.
+24. Payslip PDF generation.
+25. Compensation effective dates.
+26. Candidate creation.
+27. Recruitment stage movement.
+28. Performance review creation.
+29. Onboarding checklist completion.
+30. HR analytics consistency.
+31. Report exports.
+32. Global search.
+33. Sorting.
+34. Filtering.
+35. Pagination.
+36. LocalStorage persistence.
+37. Corrupt storage recovery.
+38. JSON backup.
+39. JSON restore.
+40. Demo data reset.
+41. Theme persistence.
+42. Mobile navigation.
+43. Cross-page employee data consistency.
+
+Run:
+
+- TypeScript typecheck
+- ESLint
+- Unit tests
+- Critical browser tests where available
+- Production build
+
+Never claim tests passed without execution.
+
+---
+
+# 19. PROJECT ARCHITECTURE
+
+Suggested structure:
+
+src/
+  app/
+    page.tsx
+    dashboard/
+      page.tsx
+      employees/
+      organization/
+      departments/
+      attendance/
+      leave/
+      leave-calendar/
+      holidays/
+      payroll/
+      payslips/
+      compensation/
+      recruitment/
+      performance/
+      onboarding/
+      analytics/
+      reports/
+      team/
+      activity/
+      settings/
+      help/
+  components/
+    layout/
+    ui/
+    employees/
+    attendance/
+    leave/
+    payroll/
+    recruitment/
+    organization/
+    charts/
+    forms/
+    tables/
+  features/
+    employees/
+    departments/
+    attendance/
+    leave/
+    payroll/
+    recruitment/
+    performance/
+  lib/
+    storage/
+    calculations/
+    validation/
+    pdf/
+    seed/
+    export/
+  stores/
+  hooks/
+  types/
+  tests/
+
+Avoid monolithic page files.
+
+Use shared, reusable components.
+
+Keep payroll and leave calculations separate from UI components.
+
+---
+
+# 20. IMPLEMENTATION PHASES
+
+PHASE 1: Design Foundation
+- Initialize Next.js
+- Establish tokens
+- Typography
+- Sidebar
+- Topbar
+- Themes
+- Responsive shell
+
+PHASE 2: Data Foundation
+- TypeScript models
+- Relationships
+- LocalStorage
+- Seed records
+- Validation
+- Central store
+
+PHASE 3: Employee Core
+- Employee directory
+- Employee CRUD
+- Employee 360° Profile
+- Departments
+- Organization Chart
+
+PHASE 4: Time and Leave
+- Attendance
+- Work schedules
+- Leave requests
+- Approval workflow
+- Leave calendar
+- Holidays
+
+PHASE 5: Payroll
+- Compensation
+- Payroll calculations
+- Payroll preview
+- Payslip PDF
+
+PHASE 6: Talent
+- Recruitment
+- Candidate Kanban
+- Performance
+- Onboarding
+
+PHASE 7: Insights
+- Dashboard
+- HR analytics
+- Reports
+- Activity feed
+
+PHASE 8: Finishing
+- Settings
+- Help
+- Mobile refinements
+- Accessibility
+- Tests
+- Production build
+
+Complete each phase coherently.
+
+Do not sacrifice working functionality to maximize page count.
+
+---
+
+# 21. STRICT QUALITY RULES
+
+DO NOT:
+
+- Build a generic admin template.
+- Create static employee tables with dead buttons.
+- Use unrelated fake KPI values.
+- Implement pretend secure authentication.
+- Claim real payroll processing.
+- Claim banking integrations.
+- Claim legally compliant tax calculation.
+- Store real sensitive employee records.
+- Create a fake attendance hardware integration.
+- Use a database.
+- Require a backend.
+- Leave placeholder pages.
+- Use Lorem Ipsum.
+- Ignore responsive behavior.
+- Ignore accessibility.
+- Break employee relationships.
+- Lose records after refresh.
+- Claim unverified tests passed.
+
+Every major workflow must genuinely work.
+
+---
+
+# 22. DELIVERABLES
+
+Deliver:
+
+1. Complete Next.js application.
+2. Original PEOPLIX HR branding.
+3. Premium responsive AppShell.
+4. HR Overview Dashboard.
+5. Employee Directory.
+6. Employee 360° Profile.
+7. Department Management.
+8. Interactive Organization Chart.
+9. Attendance Management.
+10. Leave Approval System.
+11. Team Leave Calendar.
+12. Holiday Management.
+13. Payroll Simulation.
+14. Payslip PDF Generation.
+15. Compensation Management.
+16. Recruitment Kanban.
+17. Performance Management.
+18. Employee Onboarding.
+19. HR Analytics.
+20. Reporting Center.
+21. Demo Team Roles.
+22. Activity Timeline.
+23. Settings.
+24. Help Documentation.
+25. Light and Dark Mode.
+26. Global Search.
+27. LocalStorage persistence.
+28. JSON backup and restore.
+29. CSV exports.
+30. Automated tests.
+31. README.md.
+32. Vercel-compatible production build.
+
+README must include:
+
+"Portfolio Demo vs Production HR Management Software"
+
+Explain the absence of secure authentication, server-side access controls, cloud synchronization, legal payroll compliance, and protected employee records.
+
+---
+
+# 23. FINAL ACCEPTANCE GATE
+
+Do not report the application as complete until:
+
+- Every route renders.
+- Employee CRUD works.
+- Employee profiles show consistent data.
+- Organization hierarchy works.
+- Department changes propagate.
+- Attendance records persist.
+- Leave approvals update balances.
+- Leave cancellations restore balances.
+- Payroll calculations are correct under the documented demo rules.
+- Payslip PDF downloads work.
+- Recruitment stage movement works.
+- Performance reviews persist.
+- Onboarding checklists work.
+- Analytics use actual local records.
+- Filters and exports work.
+- JSON backup and restore work.
+- LocalStorage survives refresh.
+- Light and Dark Mode are polished.
+- Mobile layouts are usable.
+- No critical dead buttons remain.
+- No database is required.
+- No backend is required.
+- Production build passes.
+- Test execution results are reported honestly.
+
+If anything remains unfinished, provide a clear list of missing or unverified functionality.
+
+---
+
+# FINAL INSTRUCTION
+
+Build PEOPLIX HR as a polished, human-centric, highly interactive HR Management application.
+
+The five signature experiences are:
+
+1. Employee 360° Profile.
+2. Attendance Management.
+3. Leave Approval Workflow.
+4. Payroll Workspace with Payslip PDF.
+5. Interactive Organization Chart.
+
+Prioritize:
+
+- Premium product design
+- Reliable employee data relationships
+- Accurate demo calculations
+- Excellent interaction quality
+- Responsive usability
+- LocalStorage persistence
+- Honest technical limitations
+
+Begin with the design system, application architecture, and data models. Implement each phase systematically and verify its core workflows.

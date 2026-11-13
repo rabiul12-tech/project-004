@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-canvas: #F9FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --bg-elevated: #F1F5F9;
+  --bg-accent-soft: #E8F7F4;
+  --text-primary: #172033;
+  --text-secondary: #64748B;
+  --border-subtle: #E7EAF0;
+  --accent-primary: #0D9488;
+  --accent-hover: #0F766E;
+  --accent-secondary: #F97373;
+  --status-success: #16A34A;
+  --status-warning: #D97706;
+  --status-danger: #DC2626;
+}
+
+.dark {
+  --bg-canvas: #0D1420;
+  --bg-surface: #182535;
+  --bg-sidebar: #121D2B;
+  --bg-elevated: #203044;
+  --bg-accent-soft: rgba(45, 212, 191, 0.12);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-subtle: #304154;
+  --accent-primary: #2DD4BF;
+  --accent-hover: #14B8A6;
+  --accent-secondary: #F97373;
+  --status-success: #22C55E;
+  --status-warning: #F59E0B;
+  --status-danger: #EF4444;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
